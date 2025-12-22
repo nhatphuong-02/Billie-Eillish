@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  background-color: rgb(0, 0, 0);
+  box-sizing: border-box;
+}
+:root {
+  --main-color: rgb(115, 238, 115);
+}
+html {
+  font-family: Helvetica, sans-serif;
+}
+
+/* --- Menu --- */
+.header {
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.menu {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: fixed;
+  top: 0;
+  background: var(--main-color);
+  z-index: 100;
+}
+
+.menu .logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu .logo img {
+  width: 25rem;
+  height: auto;
+  margin: 0;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--main-color);
+}
+
+.menu ul li {
+  display: block;
+  margin: 0 1.5rem;
+  padding: 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  display: block;
+  background-color: var(--main-color);
+  padding: 1.5rem 0;
+  position: relative;
+  transition: 0.3s ease;
+}
+.menu ul li a span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: var(--main-color);
+}
+.menu ul li a i {
+  font-size: 1.2rem;
+  background-color: var(--main-color);
+  padding: 0.5rem;
+}
+.menu ul li:hover a {
+  color: rgb(255, 255, 255);
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  display: block;
+  margin-top: 5px;
+  background: rgb(255, 255, 255);
+  transition: 0.3s ease;
+  bottom: 0;
+  left: 0;
+}
+.menu ul li:hover a::after {
+  width: 100%;
+}
+
+section {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 10% auto;
+  color: rgb(255, 255, 255);
+}
+section h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 5vh;
+}
+section p {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+section input {
+  width: 90%;
+  height: 6vh;
+  padding: 1rem;
+  border: solid 0.5px var(--main-color);
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+.bt {
+  margin-top: 5%;
+  width: 90%;
+  text-align: center;
+}
+.left-sec {
+  width: 100%;
+  padding: 0 5%;
+}
+.left-sec .fg {
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.button {
+  padding: 1rem 3rem;
+  border: solid 0.5px var(--main-color);
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: rgb(0, 0, 0);
+}
+.right-sec {
+  padding: 0 5%;
+  width: 100%;
+  border-left: dashed 0.1px var(--main-color);
+}
+.right-sec .note {
+  width: 90%;
+  height: auto;
+  padding: 0 1rem;
+  font-size: 2.5rem;
+  background-color: var(--main-color);
+  color: rgb(0, 0, 0);
+  margin-bottom: 5vh;
+}
+.note span {
+  background-color: var(--main-color);
+}
+.note i {
+  font-size: 1.5rem;
+  background-color: var(--main-color);
+}
+.note {
+  height: 100%;
+}
+.request {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/*-----Footer-----*/
+.upper {
+  float: left;
+  width: 100%;
+  height: auto;
+  border-top: solid 0.1rem rgb(100, 100, 100);
+  border-bottom: solid 0.1rem rgb(100, 100, 100);
+  text-align: center;
+  color: var(--main-color);
+  font-size: 2rem;
+}
+.social {
+  width: 20%;
+  float: left;
+}
+footer img {
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  display: block;
+}
+footer p {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+footer span {
+  margin-top: -1rem;
+  padding: 1.5rem;
+}
+footer span i {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+footer span i:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(1.25);
+  border-radius: 50%;
+}
+.policy p {
+  margin: 3rem auto;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: rgb(150, 150, 150);
+}
+.policy1 {
+  margin-top: 8vh;
+  margin-left: 5rem;
+  width: 25%;
+  float: left;
+  text-align: left;
+}
+
+.policy2 {
+  margin-top: 8vh;
+  width: 25%;
+  float: left;
+  text-align: left;
+}
+.policy p:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link {
+  float: left;
+  margin-top: 10vh;
+  margin-left: 1rem;
+  width: 25%;
+  text-align: left;
+}
+.link span {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+.link p {
+  color: var(--main-color);
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+.link p a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+.link p a:hover {
+  text-decoration: underline;
+}
+.lower p {
+  color: rgb(255, 255, 255);
+  margin: 1rem auto;
+  font-size: 1rem;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+/*Responsive tablet*/
+@media (max-width: 1024px) {
+  /* ===== MENU ===== */
+  .menu {
+    padding: 0 3%;
+  }
+
+  .menu .logo img {
+    width: 18rem;
+  }
+
+  .menu ul li {
+    margin: 0 1rem;
+  }
+
+  /* ===== SECTION (FORM) ===== */
+  section {
+    width: 90%;
+    margin: 15% auto;
+  }
+
+  section h2 {
+    font-size: 2.5rem;
+  }
+
+  section p {
+    font-size: 1.8rem;
+  }
+
+  .left-sec,
+  .right-sec {
+    padding: 0 3%;
+  }
+
+  .right-sec {
+    border-left: dashed 0.1px var(--main-color);
+  }
+
+  /* ===== NOTE ===== */
+  .right-sec .note {
+    font-size: 2rem;
+  }
+
+  /* ===== FOOTER ===== */
+  .social,
+  .policy1,
+  .policy2,
+  .link {
+    width: 45%;
+    float: none;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+  .policy1,
+  .policy2 {
+    text-align: center;
+  }
+}
+
+/*Responsive mobile*/
+@media (max-width: 600px) {
+  /* ===== MENU ===== */
+  .menu {
+    height: 6.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .logo img {
+    width: 12rem;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  nav ul li a span {
+    display: none;
+  }
+
+  nav ul li a i {
+    font-size: 2rem;
+  }
+
+  /* ===== SECTION (FORM) ===== */
+  section {
+    flex-direction: column;
+    width: 95%;
+    margin: 25% auto;
+  }
+
+  section h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  section p {
+    font-size: 1.6rem;
+  }
+
+  .left-sec,
+  .right-sec {
+    width: 100%;
+    padding: 0 2%;
+  }
+
+  .right-sec {
+    border-left: none;
+    border-top: dashed 0.1px var(--main-color);
+    margin-top: 5rem;
+    padding-top: 5rem;
+  }
+
+  section input {
+    width: 100%;
+  }
+
+  .bt {
+    width: 100%;
+  }
+
+  /* ===== NOTE ===== */
+  .right-sec .note {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+
+  /* ===== FOOTER ===== */
+  .social,
+  .policy1,
+  .policy2,
+  .link {
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  .policy1,
+  .policy2,
+  .link {
+    text-align: center;
+  }
+
+  .lower p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .left,
+  .right {
+    float: none;
+  }
+}

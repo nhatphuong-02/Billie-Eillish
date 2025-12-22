@@ -1,0 +1,646 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  background-color: rgb(40, 31, 30);
+  box-sizing: border-box;
+}
+:root {
+  --main-color: rgb(115, 238, 115);
+}
+html {
+  font-family: Helvetica, sans-serif;
+}
+body {
+  position: relative;
+}
+
+.snow::before,
+.snow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(1.5rem at 35% 50%, white, transparent),
+    radial-gradient(1rem at 5% 30%, white, transparent),
+    radial-gradient(0.5rem at 20% 70%, white, transparent),
+    radial-gradient(0.3rem at 80% 60%, white, transparent),
+    radial-gradient(0.1rem at 40% 80%, white, transparent);
+  background-size: 100rem 30rem;
+  animation: snow 80s linear infinite;
+}
+
+.snow::after {
+  background-size: 70rem 40rem;
+  animation-duration: 40s;
+  opacity: 0.5;
+}
+
+@keyframes snow {
+  from {
+    background-position: 0 -200rem;
+  }
+  to {
+    background-position: 0 200rem;
+  }
+}
+/*Menu*/
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  background-color: rgb(32, 25, 24);
+}
+.menu .home {
+  width: 25%;
+  text-align: center;
+  margin: 0 auto;
+}
+.menu .home a img {
+  width: 100%;
+  margin: 1.5rem 0;
+  display: block;
+  background-color: rgb(32, 25, 24);
+}
+.menu nav {
+  width: 100%;
+  text-align: center;
+  height: auto;
+  margin: 0 auto;
+  background-color: rgb(32, 25, 24);
+}
+.menu nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(32, 25, 24);
+  position: relative;
+}
+.menu nav ul li {
+  cursor: pointer;
+  padding: 1.5rem 10rem;
+  position: relative;
+  background-color: rgb(32, 25, 24);
+}
+.menu nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: rgb(32, 25, 24);
+}
+.hide {
+  display: none;
+  position: absolute;
+  top: 103%;
+  left: 0%;
+  width: 100%;
+  transition: 0.3s ease;
+}
+.hide ul li:first-child {
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.hide ul li:last-child {
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.menu nav ul li:hover .hide {
+  display: block;
+}
+.menu nav ul li .hide ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.menu nav ul li .hide ul li {
+  width: 100%;
+  padding: 2rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: rgb(52, 42, 40);
+}
+.menu nav ul li:hover {
+  background-color: rgb(52, 42, 40);
+  border-radius: 1rem;
+}
+.menu nav ul li:hover a {
+  background-color: rgb(52, 42, 40);
+}
+.menu nav ul li .hide ul li:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(32, 25, 24);
+}
+.icon {
+  display: flex;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 2%;
+}
+.icon i,
+.navigation i {
+  cursor: pointer;
+  padding: 1.5rem;
+  font-size: 2rem;
+  background-color: rgb(32, 25, 24);
+}
+.icon i:hover,
+.navigation i:hover {
+  background-color: rgb(52, 42, 40);
+}
+#mn.navigation {
+  display: flex;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 1%;
+  padding: 0rem;
+}
+#mn.navigation i {
+  font-size: 2rem;
+}
+#mn.navigation a {
+  color: rgb(255, 255, 255);
+  padding: 1rem 0;
+}
+#mn.navigation a i {
+  background-color: rgb(40, 31, 30);
+  padding: 1rem;
+}
+/*-----Banner----- */
+.banner {
+  width: 60%;
+  margin: 30rem auto;
+  color: rgb(255, 255, 255);
+  font-size: 8rem;
+  font-weight: 500;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  text-shadow: 0 0 8px rgb(255, 0, 0), 0 0 16px rgb(255, 0, 0),
+    0 0 32px rgb(255, 0, 0), 0 0 64px rgb(255, 0, 0);
+  animation: banner 2s infinite alternate;
+  transition: 1s ease;
+}
+@keyframes banner {
+  0% {
+    text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0),
+      0 0 30px rgb(255, 0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    text-shadow: 0 0 30px rgb(255, 0, 0), 0 0 35px rgb(255, 0, 0),
+      0 0 40px rgb(255, 0, 0), 0 0 50px rgb(255, 0, 0);
+    opacity: 1;
+  }
+}
+
+/*-----Main-----*/
+.main {
+  margin: 10rem auto;
+  margin-bottom: 0;
+}
+
+/* -----New arrivals----- */
+.main .new-arrivals {
+  width: 100%;
+  margin: 0 auto;
+}
+.new-arrivals .button button:hover {
+  color: rgb(40, 31, 30);
+  background-color: var(--main-color);
+}
+.main h1 {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-weight: 800;
+  margin-left: 10%;
+}
+.main .items {
+  display: flex;
+  margin-bottom: 4rem;
+  justify-content: center;
+}
+.main .items .item {
+  cursor: pointer;
+  width: 20%;
+  margin: 1rem;
+  position: relative;
+}
+.bgr {
+  background-color: rgb(37, 28, 27);
+}
+.main .items .item img {
+  width: 100%;
+  height: 90%;
+  display: block;
+  object-fit: cover;
+}
+.back {
+  background-color: rgb(37, 28, 27);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.main .items .item p {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+.main .items .item:hover .back {
+  opacity: 1;
+}
+.pre-order {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  background: var(--main-color);
+}
+.new-arrivals .button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.new-arrivals .button p {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+.new-arrivals .button button {
+  margin-top: 1.5rem;
+  padding: 1rem 4rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: solid 3px;
+  cursor: pointer;
+}
+
+/* -----Mystery product-----*/
+.main .mystery-product {
+  width: 100%;
+  margin: 10rem auto;
+  border-top: solid 0.2rem rgb(52, 42, 40);
+}
+
+/*-----Holiday gifts-----*/
+.holiday-gifts {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1%;
+  border-top: solid 0.2rem rgb(52, 42, 40);
+}
+.holiday-gifts .text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  background-color: rgb(37, 28, 27);
+}
+.holiday-gifts .text h6 {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.holiday-gifts .text h3 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.holiday-gifts .text button {
+  margin: 2rem 0;
+  padding: 1.5rem 7rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  border: solid 0.5rem rgb(255, 255, 255);
+  z-index: 1;
+}
+.holiday-gifts .text button:hover {
+  cursor: pointer;
+  color: rgb(37, 28, 27);
+  background-color: var(--main-color);
+  border: solid 0.5rem var(--main-color);
+}
+.holiday-gifts .pic {
+  width: 50%;
+  background-color: rgb(37, 28, 27);
+  text-align: center;
+}
+/*-----Introduce products-----*/
+.introduce {
+  width: 100%;
+  margin-bottom: 10%;
+}
+#logo {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+#logo #ava {
+  width: 100%;
+  height: 60%;
+}
+#logo #name-shop {
+  font-size: 3rem;
+  margin: 5% 0;
+  font-weight: 600;
+}
+.more {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  border: 0.3rem solid rgb(255, 255, 255);
+}
+.more:hover {
+  background-color: var(--main-color);
+  border: 0.3rem solid var(--main-color);
+  color: rgb(40, 31, 30);
+}
+/*-----Album-----*/
+.album-shop {
+  width: 100%;
+  padding-bottom: 10%;
+  border-top: solid 0.3rem rgb(52, 42, 40);
+}
+.album-shop .pic {
+  display: flex;
+  justify-content: center;
+}
+.album-shop .pic img {
+  width: 30%;
+  margin: 0 auto;
+  z-index: 1;
+  transition: 0.5s ease;
+}
+.album-shop .pic img:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+
+/*-----Footer-----*/
+.upper {
+  float: left;
+  width: 100%;
+  height: auto;
+  border-top: solid 0.1rem rgb(100, 100, 100);
+  border-bottom: solid 0.1rem rgb(100, 100, 100);
+  text-align: center;
+  color: var(--main-color);
+  font-size: 2rem;
+}
+.social {
+  width: 20%;
+  float: left;
+}
+footer img {
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+  display: block;
+  background-color: rgb(40, 31, 30);
+}
+footer p {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+footer span {
+  margin-top: -2rem;
+  padding: 1.5rem;
+}
+footer span i {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+footer span i:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(1.25);
+  border-radius: 50%;
+}
+.policy p {
+  margin: 3rem auto;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: rgb(150, 150, 150);
+}
+.policy1 {
+  margin-top: 8vh;
+  margin-left: 5rem;
+  width: 25%;
+  float: left;
+  text-align: left;
+}
+
+.policy2 {
+  margin-top: 8vh;
+  width: 25%;
+  float: left;
+  text-align: left;
+}
+.policy p:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link {
+  float: left;
+  margin-top: 10vh;
+  margin-left: 1rem;
+  width: 25%;
+  text-align: left;
+}
+.link span {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+.link p {
+  color: var(--main-color);
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+.link p a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+.link p a:hover {
+  text-decoration: underline;
+}
+.lower p {
+  color: rgb(255, 255, 255);
+  margin: 1rem auto;
+  font-size: 1rem;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+/*Responsive tablet*/
+@media (max-width: 1024px) {
+  /* ===== MENU ===== */
+  .menu .home {
+    width: 45%;
+  }
+
+  .menu nav ul li {
+    padding: 1.5rem 3rem;
+  }
+  .icon {
+    top: -150%;
+  }
+
+  /* ===== BANNER ===== */
+  .banner {
+    width: 85%;
+    font-size: 5rem;
+    margin: 25rem auto;
+  }
+  /* ===== ITEMS ===== */
+  .main .items {
+    padding: 1rem 0;
+  }
+  .main .items .item {
+    width: 45%;
+  }
+
+  /* ===== HOLIDAY GIFTS ===== */
+  .holiday-gifts {
+    flex-direction: column;
+  }
+
+  .holiday-gifts .text,
+  .holiday-gifts .pic {
+    width: 100%;
+  }
+
+  /* ===== INTRODUCE ===== */
+  #logo {
+    width: 60%;
+  }
+  #logo #name-shop {
+    font-size: 2rem;
+  }
+
+  /* ===== ALBUM ===== */
+  .album-shop .pic img {
+    width: 30%;
+  }
+  /* ===== FOOTER ===== */
+  .social,
+  .policy1,
+  .policy2,
+  .link {
+    width: 45%;
+    float: none;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+  .policy1,
+  .policy2 {
+    text-align: center;
+  }
+}
+
+/*Responsive mobile*/
+@media (max-width: 600px) {
+  /* ===== MENU ===== */
+  .menu nav ul li a,
+  .menu nav ul li .hide ul li {
+    font-size: 1rem;
+  }
+  .menu i {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .icon {
+    display: none;
+  }
+
+  /* ===== BANNER ===== */
+  .banner {
+    width: 90%;
+    font-size: 3.5rem;
+    margin: 18rem auto;
+  }
+
+  /* ===== ITEMS ===== */
+  .main .items {
+    flex-wrap: wrap;
+  }
+  .main .items .item {
+    width: 90%;
+  }
+  /* ===== GIFTS ===== */
+  .holiday-gifts img {
+    width: 100%;
+  }
+  /* ===== INTRODUCE ===== */
+  #logo {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  /* ===== ALBUM ===== */
+  .album-shop .pic {
+    flex-direction: column;
+  }
+
+  .album-shop .pic img {
+    width: 90%;
+  }
+
+  /* ===== FOOTER ===== */
+  .upper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social,
+  .policy1,
+  .policy2,
+  .link {
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+  .left,
+  .right {
+    float: none;
+    text-align: center;
+  }
+}
