@@ -40,6 +40,7 @@ html {
   width: 25rem;
   height: auto;
   margin: 0;
+  background-color: var(--main-color);
 }
 
 .menu ul {
@@ -51,12 +52,14 @@ html {
 }
 
 .menu ul li {
-  display: block;
   margin: 0 1.5rem;
   padding: 0;
+  display: block;
+  background-color: var(--main-color);
 }
 
 .menu ul li a {
+  display: block;
   text-decoration: none;
   color: rgb(0, 0, 0);
   display: block;
@@ -588,7 +591,7 @@ footer span i:hover {
 
   /* ===== SLIDER ===== */
   .slider {
-    height: 40vh;
+    height: 30vh;
     margin-top: 10rem;
   }
 
@@ -664,7 +667,7 @@ footer span i:hover {
 }
 
 /*Responsive mobile*/
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   /* ===== MENU ===== */
   .menu {
     height: 6.5rem;
@@ -776,6 +779,202 @@ footer span i:hover {
     width: 90%;
     margin: 2rem auto;
     text-align: center;
+  }
+
+  .left,
+  .right {
+    float: none;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ===== MENU ===== */
+  .menu {
+    height: 6rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu .logo {
+    flex: 0 0 auto;
+    max-width: 120px;
+  }
+
+  .menu .logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .menu ul {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu ul li {
+    margin: 0;
+  }
+
+  .menu ul li a span {
+    display: none;
+  }
+
+  .menu ul li a i {
+    font-size: 1rem;
+  }
+
+  /* ===== SLIDER ===== */
+  .slider {
+    height: 22vh;
+    margin-top: 8rem;
+    overflow: hidden;
+  }
+
+  .slides {
+    width: 500%;
+  }
+
+  .slides img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+
+  /* ===== MAIN ===== */
+  .main {
+    margin: 4rem 0;
+  }
+
+  .main img {
+    width: 100%;
+    margin: 2rem auto;
+    display: block;
+  }
+
+  /* ===== TICKET ===== */
+  .ticketbox {
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .ticketbox .box {
+    width: 92%;
+    margin: 1.5rem auto;
+    border-radius: 2rem;
+  }
+
+  .ticketbox .box img {
+    height: 22vh;
+  }
+
+  /* ===== FORM ===== */
+  .form {
+    padding: 1rem;
+  }
+
+  form {
+    width: 95%;
+    padding: 2rem 1.5rem;
+  }
+
+  form img {
+    width: 70%;
+  }
+
+  /* ===== COLLECTION ===== */
+  .collection-minilayout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .collection-minilayout .text,
+  .collection-minilayout .content {
+    width: 100%;
+  }
+
+  .collection-minilayout .text .title h1 {
+    font-size: 3.5rem;
+    padding-top: 4rem;
+  }
+
+  .collection-minilayout .text .title span {
+    font-size: 2.2rem;
+    padding: 0 0.5rem;
+  }
+
+  .view-collection {
+    font-size: 1.6rem;
+    padding: 1rem 2.5rem;
+  }
+
+  /* ===== STORE ===== */
+  .store-minilayout {
+    height: auto;
+  }
+
+  .store-minilayout h1 {
+    font-size: 3.5rem;
+  }
+
+  .store-minilayout .choice {
+    flex-direction: column;
+    font-size: 2rem;
+  }
+
+  .products {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .products .pic {
+    width: 92%;
+    height: auto;
+    margin: 2rem auto;
+  }
+
+  .products .pic img {
+    height: 260px;
+    object-fit: cover;
+  }
+
+  /* ===== VIEW MORE ===== */
+  .view-more button {
+    width: 90%;
+    font-size: 1.8rem;
+  }
+
+  /* ===== FOOTER ===== */
+  .upper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social,
+  .policy1,
+  .policy2,
+  .link {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  .policy p,
+  footer p {
+    font-size: 1.2rem;
   }
 
   .left,
