@@ -566,12 +566,6 @@ footer span i:hover {
 }
 
 @media (max-width: 480px) {
-  html,
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
   /* ===== MENU ===== */
   .menu {
     height: 6rem;

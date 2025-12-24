@@ -405,6 +405,10 @@ body {
 }
 
 /*-----Footer-----*/
+footer {
+  position: relative;
+  z-index: 2;
+}
 .upper {
   float: left;
   width: 100%;
@@ -642,5 +646,28 @@ footer span i:hover {
   .right {
     float: none;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 18rem;
+  }
+  /* ===== MENU ===== */
+  .menu nav ul li a {
+    font-size: 0.8rem;
+  }
+  .menu nav ul li {
+    padding: 1.5rem;
+  }
+  .menu nav ul li .hide {
+    text-align: center;
+  }
+  .menu nav ul li .hide ul li {
+    font-size: 0.5rem;
+  }
+  /* ===== MAIN ===== */
+  .main .items .item img {
+    height: auto;
   }
 }

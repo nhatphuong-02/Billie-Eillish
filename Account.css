@@ -295,7 +295,7 @@ footer span i:hover {
     margin: 0 1rem;
   }
 
-  /* ===== SECTION (FORM) ===== */
+  /* ===== FORM ===== */
   section {
     width: 90%;
     margin: 15% auto;
@@ -365,7 +365,7 @@ footer span i:hover {
     font-size: 2rem;
   }
 
-  /* ===== SECTION (FORM) ===== */
+  /* ===== FORM ===== */
   section {
     flex-direction: column;
     width: 95%;
@@ -433,5 +433,70 @@ footer span i:hover {
   .left,
   .right {
     float: none;
+  }
+}
+@media (max-width: 480px) {
+  /* ===== MENU ===== */
+  .menu {
+    height: 6rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu .logo {
+    flex: 0 0 auto;
+    max-width: 120px;
+  }
+
+  .menu .logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .menu ul {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu ul li {
+    margin: 0;
+  }
+
+  .menu ul li a span {
+    display: none;
+  }
+
+  .menu ul li a i {
+    font-size: 1rem;
+  }
+  /* ===== FOOTER ===== */
+  .upper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social,
+  .policy1,
+  .policy2,
+  .link {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  .policy p,
+  footer p {
+    font-size: 1.2rem;
+  }
+
+  .left,
+  .right {
+    float: none;
+    text-align: center;
   }
 }
