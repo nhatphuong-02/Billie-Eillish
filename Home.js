@@ -12,6 +12,7 @@ function openStore(id) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".choice .title").classList.add("active");
   const tickets = document.querySelectorAll(".ticket");
   const order = document.getElementById("order");
 

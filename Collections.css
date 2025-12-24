@@ -564,3 +564,79 @@ footer span i:hover {
     float: none;
   }
 }
+
+@media (max-width: 480px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ===== MENU ===== */
+  .menu {
+    height: 6rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu .logo {
+    flex: 0 0 auto;
+    max-width: 120px;
+  }
+
+  .menu .logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .menu ul {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu ul li {
+    margin: 0;
+  }
+
+  .menu ul li a span {
+    display: none;
+  }
+
+  .menu ul li a i {
+    font-size: 1rem;
+  }
+  /* ===== MAIN ===== */
+  .main h1 {
+    font-size: 2rem;
+  }
+  /* ===== FOOTER ===== */
+  .upper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social,
+  .policy1,
+  .policy2,
+  .link {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  .policy p,
+  footer p {
+    font-size: 1.2rem;
+  }
+
+  .left,
+  .right {
+    float: none;
+    text-align: center;
+  }
+}
