@@ -164,7 +164,7 @@ html {
 .ticketbox {
   width: 70%;
   margin: 2rem auto;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-transform: uppercase;
   display: flex;
 }
@@ -174,14 +174,14 @@ html {
   margin: 1rem;
   border-radius: 3rem;
   overflow: hidden;
-  background: rgb(100, 100, 100);
+  background-color: var(--main-color);
   transition: 0.3s ease;
 }
 .ticketbox .box:hover {
   transform: scale(1.05);
 }
 .ticketbox .box h2 {
-  background: rgb(100, 100, 100);
+  background-color: var(--main-color);
   font-size: 2rem;
 }
 .ticketbox .box img {
@@ -194,7 +194,7 @@ html {
 .ticketbox .box p {
   padding: 0.5rem 0;
   font-size: 1.5rem;
-  background: rgb(100, 100, 100);
+  background-color: var(--main-color);
 }
 .ticketbox .box p:hover {
   text-decoration: underline;
@@ -270,19 +270,19 @@ form p {
 /*button*/
 .ticket {
   font-size: 1.5rem;
-  background-color: rgb(100, 100, 100);
-  color: rgb(255, 255, 255);
+  background-color: var(--main-color);
+  color: rgb(0, 0, 0);
   text-transform: uppercase;
   padding: 0.75rem 1rem;
   border-radius: 1rem;
-  border: solid rgb(255, 255, 255) 3px;
+  border: solid rgb(0, 0, 0) 3px;
   margin: 1rem;
   transition: 0.2s ease;
 }
 .ticket:hover {
   cursor: pointer;
-  color: rgb(0, 0, 0);
-  background: var(--main-color);
+  background-color: rgb(0, 0, 0);
+  color: var(--main-color);
 }
 
 /* -----Collections----- */
@@ -567,6 +567,9 @@ footer span i:hover {
   color: rgb(255, 255, 255);
   margin: 1rem auto;
   font-size: 1rem;
+}
+.lower {
+  margin: 1rem;
 }
 .left {
   float: left;

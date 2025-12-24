@@ -179,7 +179,7 @@ body {
   width: 60%;
   margin: 30rem auto;
   color: rgb(255, 255, 255);
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 500;
   font-family: "Dancing Script", cursive;
   text-align: center;
@@ -345,6 +345,7 @@ body {
   width: 50%;
   background-color: rgb(37, 28, 27);
   text-align: center;
+  overflow: hidden;
 }
 /*-----Introduce products-----*/
 .introduce {
@@ -504,6 +505,9 @@ footer span i:hover {
   color: rgb(255, 255, 255);
   margin: 1rem auto;
   font-size: 1rem;
+}
+.lower {
+  margin: 1rem;
 }
 .left {
   float: left;

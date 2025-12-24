@@ -365,6 +365,9 @@ footer span i:hover {
   margin: 1rem auto;
   font-size: 1rem;
 }
+.lower {
+  margin: 1rem;
+}
 .left {
   float: left;
 }
@@ -558,7 +561,9 @@ footer span i:hover {
     text-align: center;
     font-size: 1rem;
   }
-
+  .lower {
+    margin: 1rem;
+  }
   .left,
   .right {
     float: none;

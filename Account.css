@@ -273,6 +273,9 @@ footer span i:hover {
   margin: 1rem auto;
   font-size: 1rem;
 }
+.lower {
+  margin: 1rem;
+}
 .left {
   float: left;
 }
